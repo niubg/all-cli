@@ -1,0 +1,28 @@
+{
+  "name": "tadu-cli",
+  "version": "1.0.1",
+  "description": "这是一个自动化脚手架包含了更多的技术框架一键安装部署及选用",
+  "main": "tadu-cli.js",
+  "bin": {
+    "tadu-cli": "main.js"
+  },
+  "keywords": [
+    "niubg"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niubg"
+  },
+  "author": "niubg",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.1.0",
+    "ora": "^4.0.3"
+  }
+}
