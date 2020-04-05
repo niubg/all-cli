@@ -10,7 +10,13 @@ let downGit = (name) => {
     downLoad(url, name, {
         clone
     }, err => {
+        if (err) {
+            spinner.fail();
+            console.log(chalk.red(`Generation failed. ${err}`))
+            return
+        }
         spinner.stop()
+        // spinner.succeed();
         console.log(err?err:"项目创建成功")
         process.exit(1)
     })
