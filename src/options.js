@@ -1,31 +1,35 @@
 const inquirer = require('inquirer')
-let optionsArr = [{
-        name: "type",
-        // message: "你想创建一个什么类型得模板(vue|react|ssr)",
-        message: "你将要创建的是vue框架移动端模板，此框架仅适用与手机端，后续将推出更多框架敬请期待~",
-        default: 'vue'
-    },
+let optionsArr = [
     {
         type: 'list',
-        name: 'phone',
-        message: '选择手机品牌',
-            choices: [
-                { name: '小米', value: 'mi' },
-                { name: '华为', value: 'huawei' },
-                { name: '苹果', value: 'apple' }
-            ]
+        name: 'frame',
+        message: '选择框架类型',
+        choices: [
+            { name: 'vue', value: 'vue' },
+            { name: 'react', value: 'react' }
+        ]
+    },
+     {
+        type: 'list',
+        name: "tem",
+        message: "你想创建一个单页面还是多页面应用",
+        choices: [
+            { name: '单页面', value: 'onePage' },
+            { name: '多页面', value: 'manyPage' }
+        ]
     }
-    // {
-    //     name: "tem",
-    //     message: "你想创建一个什么样得项目('空模板：template|后台管理系统：adminTemplate')",
-    //     default: 'template'
-    // }
+   
 ]
 
 module.exports = () => {
-    return inquirer
+    return new Promise((resolve, reject) => {
+        return inquirer
         .prompt(optionsArr).then(answers => {
+            console.log(answers)
             let { type, tem} = answers;
             // console.log('选择的答案：', type);
+            resolve()
         })
+    })
+    
 }
