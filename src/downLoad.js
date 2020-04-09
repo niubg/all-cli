@@ -3,12 +3,12 @@ const downLoad = require('download-git-repo')
 // 动画
 const ora = require('ora')
 const chalk = require('chalk')
-let url = 'niubg/-vue-cli3-demo'
-let vue_vant = 'https://github.com:niubg/-vue-cli3-demo#vue-vant'
-let downGit = (name) => {
+// let url = 'niubg/template'
+let url = 'https://github.com:niubg/template'
+let downGit = (name, branchName) => {
     const spinner = ora('正在拉取模板...')
     spinner.start()
-    downLoad(url, name, { clone: false }, err => {
+    downLoad(`${url}#${branchName}`, name, { clone: false }, err => {
         if (err) {
             spinner.fail();
             console.log(chalk.red(`Generation failed. ${err}`))

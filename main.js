@@ -9,9 +9,14 @@ cmd.command('init').description('初始化魔板').action(async (args) => {
     typeof projectName !== 'string' && (console.log(chalk.red('缺少项目名称，请给项目起个名字！')), process.exit(1))
     console.log(chalk.green('塔读脚手架初始化 \n'))
     // 填选项
-    await options()
+    await options( function(arr) {
+        let branchName = arr.join('-');
+        console.log(branchName)
+        // 拉取
+        downGit(projectName, branchName)
+    })
     // 拉取
-    await downGit(projectName)
+    // await downGit(projectName)
 })
 
 cmd.parse(process.argv)
