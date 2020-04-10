@@ -16,7 +16,7 @@ let downGit = (name, branchName) => {
         }
         spinner.stop()
         // spinner.succeed();
-        console.log(chalk.green("项目创建成功"))
+        ora(chalk.green("项目创建成功")).succeed()
         process.exit(1)
     })
 
