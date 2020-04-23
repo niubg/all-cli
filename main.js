@@ -3,6 +3,11 @@ const cmd = require("commander");
 const chalk = require("chalk");
 const downGit = require('./src/downLoad')
 const options = require('./src/options')
+cmd
+ .option('-d, --debug', 'output extra debugging')
+ .option('-s, --small', 'small pizza size')
+ .option('-p, --pizza-type <type>', 'flavour of pizza');
+cmd.version('1.0.6');
 cmd.command('init').description('初始化模板').action(async (args) => {
     // console.log("项目名称", args.args[0])
     let projectName = args.args[0]

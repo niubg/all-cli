@@ -1,10 +1,10 @@
 {
   "name": "tadu-cli",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "这是一个自动化脚手架包含了更多的技术框架一键安装部署及选用",
   "main": "tadu-cli.js",
   "bin": {
-    "tadu-cli": "main.js"
+    "tadu": "main.js"
   },
   "keywords": [
     "niubg"

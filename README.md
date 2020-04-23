@@ -14,5 +14,5 @@ npm install -g
 
 ## 项目初始化
 ```
-tadu-cli init 项目名称
+tadu init 项目名称
 ```

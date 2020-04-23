@@ -27,7 +27,7 @@ let vueUI = [
         message: '请选择VUE要安装的UI框架',
         choices: [
             { name: 'vant', value: 'vant' },
-            { name: 'ivew', value: 'ivew' },
+            { name: 'iView', value: 'iView' },
             { name: 'antd', value: 'antd' }
         ]
     }
