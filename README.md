@@ -9,7 +9,7 @@ ora
 
 ## 安装
 ```
-npm install -g
+npm install -g tadu-cli
 ```
 
 ## 项目初始化
